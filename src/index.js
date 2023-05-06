@@ -27,6 +27,10 @@ router.use((request, response,next) => {
     next();
 })
 
+router.route('').get((request, response) => {
+    return response.json("Hello from todo list express server!")
+})
+
 router.route('/todo').get((request, response) => {
     Db.getAllTodoList().then(result => {
         response.json(result[0]);

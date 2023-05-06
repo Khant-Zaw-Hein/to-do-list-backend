@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config()
-console.log('env', process.env)
+
 const config = {
     user : process.env.DB_USER,
     password :process.env.DB_PASSWORD,
