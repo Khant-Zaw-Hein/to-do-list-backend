@@ -1,5 +1,6 @@
-var config = require('./dbconfig');
+var config = require('../dbconfig');
 const sql = require('mssql');
+
 
 const getAllTodoList = async () => {
     try {

@@ -1,14 +1,15 @@
-
+const dotenv = require('dotenv')
+dotenv.config()
+console.log('env', process.env)
 const config = {
-    user :'sa',
-    password :'localadmin',
-    server:'127.0.0.1',
-    // server:'15.0.2000.5',
+    user : process.env.DB_USER,
+    password :process.env.DB_PASSWORD,
+    server: process.env.MS_SQL_SERVER,
     database:'Todo',
     options:{
         trustedconnection: true,
         enableArithAbort : true, 
-        instancename :'KZH-PC',
+        // instancename :'to-do-list-db',
         trustServerCertificate: true
     },
     port : 1433
